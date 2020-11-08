@@ -27,7 +27,7 @@ int potenz(int n, int e){
     return count;
 }
 
-void cerca_stampa_armstrong(int A[], int dim){
+void cerca_armstrong(int A[], int dim){
 
     int temp[10];
     int temp_dim = 0;
@@ -44,14 +44,6 @@ void cerca_stampa_armstrong(int A[], int dim){
         array_element = A[i];   //popolo la variabile temporanea
         for (j = 0; token == 0 ; j++){
             
-            /*
-            j è l'esponente di 10^j dentro temp
-            j= 1   i=0 A[i] = 423    temp: 3 2 4
-            
-            temp[j] =(A[i] / (potenz(10, j))) % 10;   500 0234
-            if (A[i] / (potenz(10, j)) == 0)
-                fermati;
-            */
 
             temp[j] = array_element % 10;  //carichiamo l'unità del numero in esame nell'array temp, aumentandone la dimensione
             temp_dim++;
@@ -86,7 +78,7 @@ int main (void){
     int vett[N] = {57, 23, 24678050, 24678051, 88593477, 146511208, 472335975, 534494836, 912985153, 23};
     int dim_vett = 10;
 
-    cerca_stampa_armstrong(vett, dim_vett);
+    cerca_armstrong(vett, dim_vett);
 
     for (s=0; s < dim_vett; s++)
         printf("Numero indice %d:  %d\n", s, vett[s]);
