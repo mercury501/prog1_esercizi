@@ -10,6 +10,8 @@ Precondizione:
 
 Postcondizone: 
 
+Pseudocodice:
+
 */
 
 #include <stdio.h>
