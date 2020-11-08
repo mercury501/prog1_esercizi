@@ -35,10 +35,11 @@ anno è compreso tra 582 e 9999
 
 bool verifica(int numero_data){
 
-    int data_temp, giorno_1, giorno_2
+    int data_temp, giorno_1, giorno_2;
     if (numero_data >= 1101582)  //se dopo l'if c'è un unica istruzione, le parentesi sono superflue
         if(numero_data <= 31129999){
 
+            //MANCA VERIFICA
 
         }
 
@@ -56,7 +57,7 @@ bool verifica(int numero_data){
 
 
 
-
+//funzioni gg mm aaaa mancanti
 
 
 
