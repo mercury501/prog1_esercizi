@@ -19,7 +19,7 @@ Pseudocodice:
 #define N 100
 
 void allargacoppie(int A[], int n){
-    for (int i = 0; i < n - 1; i++) {  //i arriva a n - 1 poichè l'ultimo elemento non ha un compagno, e non va controllato
+    for (int i = 0; i < n - 1; i += 2) {  //i arriva a n - 1 poichè l'ultimo elemento non ha un compagno, e non va controllato
         if (A[i] < A[i + 1]){
             A[i] -= 1;
             A[i + 1] += 1;
