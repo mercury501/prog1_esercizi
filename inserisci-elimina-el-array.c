@@ -21,6 +21,9 @@ Pseudocodice:
 
 int aggiungiel(int A[], int dim, int el, int index){
 
+    if (index < 0 || index > dim) // controllo la validità dell'index
+        return -1;
+
     for(int i = dim + 1; i >= index; i--) //spostiamo ogni elemento dopo index a destra di una casella
         A[i] = A[i - 1];
 
@@ -31,6 +34,8 @@ int aggiungiel(int A[], int dim, int el, int index){
 }
 
 int rimuoviel(int A[], int dim, int index){
+    if (index < 0 || index > dim - 1) // controllo la validità dell'index
+        return -1;
 
     for(int i = index; i < dim; i++) // spostiamo ogni elemento a sinistra di una casella
         A[i] = A[i + 1]; // sovrascrivendo l'elemento in posizione index
