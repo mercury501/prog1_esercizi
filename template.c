@@ -1,6 +1,7 @@
 /* 
+Nome funzione:
 
-Descrizione programma:
+Descrizione funzione:
 
 Dati in ingresso: 
 
@@ -15,6 +16,7 @@ Pseudocodice:
 */
 
 #include <stdio.h>
+#define N 1000
 
 void riempi_array_int(int A[], int dim){  //legge un array di interi
     for (int i = 0; i < dim; i++){
@@ -31,7 +33,10 @@ void stampa_array_int(int arr[], int dim){  // stampa un array di interi con un 
 }
 
 int main (void){
+    int arr[N] = {23, 123, 664, 6754, 212, 564, 55, 658, 87, 12};
+    int arr_dim = 10;
 
+    char str_arr[N] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 
 
