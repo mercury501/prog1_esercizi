@@ -29,6 +29,8 @@ void stampa_array_int(int arr[], int dim){  // stampa un array di interi con un 
     for (int p = 0; p < dim; p++){
         printf("Numero in posizione %d:  %d\n", p, arr[p]);
     }
+    printf("\n\n");
+    
     return;
 }
 

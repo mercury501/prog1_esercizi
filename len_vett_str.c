@@ -16,6 +16,7 @@ Pseudocodice:
         lunghezza i = lunghezza(stringhe i)
 
 */
+// wip, da rifare con allocazione dinamica
 
 #include <stdio.h>
 #include <string.h>
