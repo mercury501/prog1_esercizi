@@ -14,7 +14,7 @@ Postcondizone:
 Pseudocodice:
 
 */
-    // wip, da rifare con allocazione dinamica
+  
 #include <stdio.h>
 #include <string.h>
 

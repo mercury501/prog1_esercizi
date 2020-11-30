@@ -16,11 +16,11 @@ Pseudocodice:
         lunghezza i = lunghezza(stringhe i)
 
 */
-// wip, da rifare con allocazione dinamica
+
 
 #include <stdio.h>
 #include <string.h>
-#define N 1000
+#define N 100
 
 
 void stampa_array_int(int arr[], int dim){  // stampa un array di interi con un ciclo for
@@ -44,18 +44,25 @@ void map_lenght(char *stringhe[], int *lunghezze, int n){
 }
 
 int main (void){
-    
-    char *str[10];
-    str[0] = "lel";
-    str[1] = "Lel"; //popoliamo le stringhe nel vettore stringhe
+    int x = 3;
+    int maxdim_str = 100;
 
-    int lung[N];
-    int dim = 2;
+    int len[N];
+    char **str = (char **) malloc(x * sizeof(char*));   // questo alloca solo il primo strato, i puntatori a stringa
 
+    int i;
+    for (i = 0; i < x; i++)
+        str[i] = malloc((maxdim_str + 1) * sizeof(char));   //il ciclo alloca lo spazio per le singole stringhe
 
-    map_lenght(&str, lung, dim);
+    strcpy(str[0], "L'altro ieri ero lì");
+    strcpy(str[1], "questa non va bene credo"); //popoliamo le stringhe nell'array
+    strcpy(str[2], "credo funzioni ora");
 
-    stampa_array_int(lung, dim);
+    map_lenght(str, len, x);
+
+    stampa_array_int(len, x);
+
+   
 
     return 0;
 }
