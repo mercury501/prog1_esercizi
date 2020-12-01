@@ -14,14 +14,14 @@ Postcondizone:
 Pseudocodice:
 
 */
-  // WIP serve aritmetica puntatori(forse)
+
 #include <stdio.h>
 #include <string.h>
 
-#define max_len 30
+#define max_len 100
 #define N 1000
 
-void transform_uppercase(char letter[], char buf[]){
+void transform_uppercase(char letter[]){
     int i;
     char *willy = (char *)malloc((max_len + 1) * sizeof(char)); // variabile temporanea
 
@@ -32,13 +32,38 @@ void transform_uppercase(char letter[], char buf[]){
             willy[i] -= 32;   //quindi sottrai 32 
         }
 
-    strcpy(buf, willy);
+    strcpy(letter, willy);
     free(willy);
 
     return;
 }
 
-void sopravvivono_maiuscole(char **stringhe, int n){
+char **i_will_survive_if_uppercase(char **strng, int dm){
+
+    int i;
+    char **buffer = malloc(dm * sizeof(char *));    // allochiamo array di stringhe, come nel main
+    for (i = 0; i < dm; i++){
+        buffer[i] = malloc( (max_len + 1) * sizeof(char));
+        strcpy(buffer[i], strng[i]);
+    }
+
+    for (i = 0; i < dm; i++)   //ciclo i per il primo indice del vettore di stringhe
+        if (*buffer[i] >= 'A' && *buffer[i] <= 'Z'){   //se la prima lettera della stringa è maiuscola, maiuscoliamo tutto
+            transform_uppercase(buffer[i]);
+            
+        }
+
+        else    //altrimenti azzeriamo 
+        {
+            *buffer[i] = '\0';
+        }
+    
+        
+    return buffer;
+}
+
+/*
+void sopravvivono_maiuscole(char **stringhe, int n){    //deprecata, confusa e con seri problemi di carburatore
     int i;
     char *buffer = (char *)malloc((max_len + 1) * sizeof(char));
 
@@ -61,29 +86,36 @@ void sopravvivono_maiuscole(char **stringhe, int n){
 
     return;
 }
-
+*/
 
 int main (void){
-    int num = 3;
-    char **str = malloc( num * sizeof(char *));
-    int i;
-    for (i = 0; i < num; i++)
+    int num = 7;    //dimensione dell'array di stringhe
+
+    char **str = malloc( num * sizeof(char *)); //allochiamo spazio per l'array di puntatori a stringa
+    int i, k;
+    for (i = 0; i < num; i++)   //allochiamo lo spazio effettivo per le stringhe
         str[i] = malloc ((max_len + 1) * sizeof(char));
 
-    str[0] = "Lel";
+    str[0] = "Lul";
     str[1] = "aael";
-    str[2] = "La vispa teresa";
+    str[2] = "Il succo della storia fin qui.";
+    str[3] = "io non resisterò";
+    str[4] = "Al principio fu creato l'Universo.";
+    str[5] = "io neanche"; 
+    str[6] = "Questo fatto ha sconcertato non poche persone ed è stato considerato dai più come una cattiva mossa.";
 
 
 
-    sopravvivono_maiuscole(str, num);
+    //sopravvivono_maiuscole(str, num);
 
-    for (int k = 0; k < num; k++){  // stampiamo le stringhe
-        printf("\nStringa n. %d", k);
-        printf("\n%s\n\n", str[k]);
+    str = i_will_survive_if_uppercase(str, num);   //la funzione ritorna un puntatore a puntatori di stringhe
+    
+    for (k = 0; k < num; k++){  // stampiamo le stringhe
+        printf("\nStringa n. %d:  ", k);
+        printf("%s", str[k]);
     }
 
-
+    printf("\n");
 
     return 0;
 }
