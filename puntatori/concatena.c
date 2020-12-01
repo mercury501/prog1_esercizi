@@ -28,7 +28,7 @@ int main(void){
     printf("\nInserisci stringa 2: ");
     gets(str_1);
 
-    printf("\n");
+    printf("\n");   //un po' di apazio che mi piace l'aria nel terminale
 
 
     char *str_2 = concatena(str_0, str_1);  //chiama la funzione concatena e assegna la nuova stringa a str_2
