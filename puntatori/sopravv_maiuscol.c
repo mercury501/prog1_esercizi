@@ -112,7 +112,7 @@ int main (void){
     
     for (k = 0; k < num; k++){  // stampiamo le stringhe
         printf("\nStringa n. %d:  ", k);
-        printf("%s", str[k]);
+        printf("%sw", str[k]);
     }
 
     printf("\n");
