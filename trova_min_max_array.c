@@ -41,7 +41,7 @@ void trova_min_max(int a[], int dim, int *min, int *max){  //in ingresso abbiamo
             temp_min = a[i];
         if (a[i] > temp_max)  //se l'elemento considerato è maggiore del massimo, cambiamo il massimo
             temp_max = a[i];
-                
+
     }
 
     *min = temp_min; //popoliamo i parametri d'uscita

@@ -96,6 +96,7 @@ int main (void){
     for (i = 0; i < num; i++)   //allochiamo lo spazio effettivo per le stringhe
         str[i] = malloc ((max_len + 1) * sizeof(char));
 
+
     str[0] = "Lul";
     str[1] = "aael";
     str[2] = "Il succo della storia fin qui.";

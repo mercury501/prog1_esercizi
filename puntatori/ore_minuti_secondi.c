@@ -42,7 +42,7 @@ void trasforma_secondi_3(int *ore, int *min, int *sec){
     *sec -= *min * 60;
     
     return;
-}
+}  
 
 int main(void){
     

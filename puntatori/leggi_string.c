@@ -2,15 +2,16 @@
 #include <string.h>
 #define N 100
 
-char *leggi_stringa(){
+char *leggi_stringa(){  //**a = a[0] *a[0]
     char buf[N];
 
     printf("Scrivi la stringa");
     scanf("%s", buf);
 
     char *s = calloc(strlen(buf) + 1, sizeof(char));  
-    strcpy(s, buf);
 
+    strcpy(s, buf);
+    
     return s;
 }
 
