@@ -5,18 +5,18 @@
 struct utente{
     int number;
     char username[20];
-    int hash;   //hash è ogni lettera di username moltiplicata e divisa per dieci, più il numero, vedi add user
+    int hash;   //hash è ogni lettera di username moltiplicata, e divisa per dieci, più il numero, vedi add user
 
 };
 
-void print_user(struct utente p[], int index){
+void print_user(struct utente *p, int index){
 
     printf("\nNumero utente: %d\nUsername: %s\nHash: %d\n", p[index].number, p[index].username, p[index].hash);
 
     return;
 }
 
-void delete_user(struct utente p[], int index){
+void delete_user(struct utente *p, int index){
 
     int i;
     for (i = index + 1; p[i].number != 0; i++ ) {   //copia ogni elemento a ritroso, sovrascrivendo quello da eliminare
@@ -34,7 +34,7 @@ void delete_user(struct utente p[], int index){
     return;
 }
 
-void add_user(struct utente p[]){
+void add_user(struct utente *p){
 
     int i, index;
     int temp = 1;
@@ -75,29 +75,30 @@ int main(void){
         scanf("%d", &choice);
 
         switch(choice){ //sceglie l'operazione da effetturare sulla lista
-        case 1:
-            add_user(lista_utenti);
-            break;
+            case 1:
+                add_user(lista_utenti);
+                break;
 
-        case 2:
-            printf("qual'è l'indice dell'utente da eliminare?\n");
-            scanf("%d", &choice);
-            delete_user(lista_utenti, choice);
-            break;
-        
-        case 3:
-            printf("qual'è l'indice dell'utente da stampare?\n");
-            scanf("%d", &choice);
-            print_user(lista_utenti, choice);
-            break;
+            case 2:
+                printf("qual'è l'indice dell'utente da eliminare?\n");
+                scanf("%d", &choice);
+                delete_user(lista_utenti, choice);
+                break;
+            
+            case 3:
+                printf("qual'è l'indice dell'utente da stampare?\n");
+                scanf("%d", &choice);
+                print_user(lista_utenti, choice);
+                break;
 
-        case -1:
-            printf("Exiting\n");
-            break;
-        
-        default:
-            printf("error, command not recognized\n");
-            break;
+            case -1:
+                printf("Exiting\n");
+                break;
+            
+            default:
+                printf("error, command not recognized\n");
+                choice = -1;
+                break;
 
         }
     }
