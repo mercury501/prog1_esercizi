@@ -1,14 +1,30 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define N 100
+
+void *xmalloc(size_t nbytes){
+
+    void *result;
+
+    result = malloc(nbytes);
+
+    if (!result){
+        fprintf(stderr, "xmalloc(%lu) failed, BYE\n", nbytes);
+        exit(-1);
+    }
+
+    return result;
+
+}
 
 char *leggi_stringa(){  //**a = a[0] *a[0]
     char buf[N];
 
-    printf("Scrivi la stringa");
+    printf("Scrivi la stringa\n");
     scanf("%s", buf);
 
-    char *s = calloc(strlen(buf) + 1, sizeof(char));  
+    char *s = xmalloc((strlen(buf) + 1) * sizeof(char));  
 
     strcpy(s, buf);
     
@@ -26,7 +42,7 @@ char **crea_array_string(int *rg){
     getchar();  //per levare il carattere newline dal buffer
 
     *rg = righe;    //portiamo fuori il numero di righe
-    char **arr_str = malloc( righe * sizeof(char *));   //dichiara array di puntatori a char
+    char **arr_str = xmalloc( righe * sizeof(char *));   //dichiara array di puntatori a char
 
     for(i = 0; i < righe;i ++){
 
@@ -35,7 +51,7 @@ char **crea_array_string(int *rg){
         fgets(buf, N, stdin);
         //scanf("%s", buf);
 
-        arr_str[i] = calloc(strlen(buf) + 1, sizeof(char));
+        arr_str[i] = xmalloc((strlen(buf) + 1) * sizeof(char));
         strcpy(arr_str[i], buf);
 
 
