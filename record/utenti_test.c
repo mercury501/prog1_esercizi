@@ -2,21 +2,21 @@
 #include <string.h>
 #define N 100
 
-struct utente{
+struct persona{
     int number;
     char username[20];
     int hash;   //hash è ogni lettera di username moltiplicata, e divisa per dieci, più il numero, vedi add user
 
 };
 
-void print_user(struct utente *p, int index){
+void print_user(struct persona *p, int index){
 
     printf("\nNumero utente: %d\nUsername: %s\nHash: %d\n", p[index].number, p[index].username, p[index].hash);
 
     return;
 }
 
-void delete_user(struct utente *p, int index){
+void delete_user(struct persona *p, int index){
 
     int i;
     for (i = index + 1; p[i].number != 0; i++ ) {   //copia ogni elemento a ritroso, sovrascrivendo quello da eliminare
@@ -34,7 +34,7 @@ void delete_user(struct utente *p, int index){
     return;
 }
 
-void add_user(struct utente *p){
+void add_user(struct persona *p){
 
     int i, index;
     int temp = 1;
@@ -63,7 +63,7 @@ void add_user(struct utente *p){
 
 int main(void){
     int choice, i;
-    struct utente lista_utenti[N];  //crea una lista di utenti
+    struct persona lista_utenti[N];  //crea una lista di utenti
 
     for (i = 0; i <= N; i++)    //pone tutti i campi number a 0
         lista_utenti[i].number = 0;
