@@ -166,6 +166,7 @@ int main(void){
     struct persona *lista_utenti;  //crea una lista di utenti
     int dim = 0;
 
+
     while (choice != -1) {
 
         printf("Operazione? 1 aggiungi utente, 2 elimina utente, 3 stampa utente, 4 cerca persona, -1 per uscire\n");
