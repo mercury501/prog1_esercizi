@@ -2,3 +2,6 @@
 !*/
 !*.*
 test*.c
+*.txt
+*.bin
+.nome123.txt.swp
