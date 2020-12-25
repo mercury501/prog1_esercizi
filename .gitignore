@@ -5,3 +5,5 @@ test*.c
 *.txt
 *.bin
 .nome123.txt.swp
+savefile.dat
+record/save-load-ptrs/a.out
