@@ -1,0 +1,23 @@
+Lewis Hamilton GBR Mercedes 363
+Sebastian Vettel GER Ferrari 317
+Valtteri Bottas	FIN Mercedes 305
+Kimi Raikkonen FIN Ferrari 205
+Daniel Ricciardo AUS Red Bull Racing Tag Heuer 200
+Max Verstappen NED Red Bull Racing Tag Heuer 168
+Sergio Perez MEX Force India Mercedes 100
+Esteban Ocon FRA Force India Mercedes 87
+Carlos Sainz ESP Renault 54
+Nico Hulkenberg	GER Renault 43
+Felipe Massa BRA Williams Mercedes 43
+Lance Stroll CAN Williams Mercedes 40
+Romain Grosjean	FRA Haas Ferrari 28
+Kevin Magnussen	DEN Haas Ferrari 19
+Fernando Alonso	ESP McLaren Honda 17
+Stoffel Vandoorne BEL McLaren Honda 13
+Jolyon Palmer GBR Renault 8
+Pascal Wehrlein	GER Sauber Ferrari 5
+Daniil Kvyat RUS Toro Rosso 5
+Marcus Ericsson	SWE Sauber Ferrari 0
+Pierre Gasly FRA Toro Rosso 0
+Antonio Giovinazzi ITA Sauber Ferrari 0
+Brendon Hartley	NZL Toro Rosso 0

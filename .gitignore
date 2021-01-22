@@ -2,7 +2,7 @@
 !*/
 !*.*
 test*.c
-*.txt
+*.swp
 *.bin
 .nome123.txt.swp
 savefile.dat

@@ -1,0 +1,5 @@
+29333 Mario,      Rossi,         2 RG
+34211 Irene,        De Neri,    3 RG ciao mamma
+35211 Giuseppe,    Verdi,    4 FC  odio lello
+36122 Luigi,      Rossi,     4 FC che sia lello buona
+22222 Chiara,      Blu,      3 RG
