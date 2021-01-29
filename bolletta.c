@@ -15,6 +15,7 @@ stampa codice, lettura netta, costo
 
 
 
+
 */
 #include <stdio.h>
 
