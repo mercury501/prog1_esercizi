@@ -18,6 +18,22 @@ int write_file_bin(const void *ptr, size_t size, size_t nmemb, char filename[]){
 
 }
 
+int *read_file_bin(int num, char filename[]){
+
+    int *temp;
+
+    temp = malloc(num * sizeof(int));
+
+    FILE *savefile; 
+    savefile = fopen(filename, "rb");
+
+    fread(temp, sizeof(int), num, savefile);
+
+    fclose(savefile);
+
+    return temp;
+
+}
 
 
 int main(void){
@@ -27,6 +43,12 @@ int main(void){
 
     
     write_file_bin(&a[0], sizeof(int), 6, "es1.dat");
+
+    int *arr;
+    arr = read_file_bin(6, "es1.dat");
+
+    for(int i = 0; i < 6; i++)
+        printf(" %d, ",arr[i]);
     
 
     
